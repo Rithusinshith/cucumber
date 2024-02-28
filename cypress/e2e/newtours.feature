@@ -2,7 +2,7 @@ Feature: newtours validation
 
 Scenario: Home Page
     Given Open newtours application
-    When provide valid username and password
+    When provide valid 'selenium' and 'selenium'
     Then click on submit button
-    And verify the url of the page
+    And verify the url should contains 'newtours/login_sucess'
    

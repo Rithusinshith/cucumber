@@ -5,18 +5,18 @@ Given("Open newtours application",()=>{
 
 })
 
-When("provide valid username and password",() =>{
-    cy.get('[name="userName"]').type('selenium')
-    cy.get('[name="password"]').type('selenium')
+When("provide valid {string} and {string}",(userName,password) =>{
+    cy.get('[name="userName"]').type(userName)
+    cy.get('[name="password"]').type(password)
 
 })
 Then("click on submit button",()=>{
    cy.get('[name="submit"]').click()
 
 })
-And("verify the url of the page",()=>{
+And("verify the url should contains {string}",(url)=>{
 
-    cy.url().should('contain','newtours/login_sucess')
+    cy.url().should('contain',url)
 
 })
 
