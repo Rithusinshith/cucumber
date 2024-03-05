@@ -18,6 +18,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    "step_definitions": "cypress/e2e/insurance"
+    "step_definitions": "cypress/e2e"
   }
 }
