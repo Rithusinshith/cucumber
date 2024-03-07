@@ -14,3 +14,11 @@ Feature: Telecom project
     Then I can fill the  details
     And click the Tariff plans  submit button
    
+    Scenario: Add a Tariff Plan to the customer
+    Given Open telecom application
+    When click on add Tariff Plan to customer button
+    And Provide the Customer ID and submit
+    And select the approved Tariff plans
+    Then click the Add Tariff Plan to the customer
+  
+   
