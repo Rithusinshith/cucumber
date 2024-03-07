@@ -75,8 +75,33 @@ import {Given,When,Then, And} from "cypress-cucumber-preprocessor/steps";
 
     cy.findByRole('button', { name: /SUBMIT/i }).click()
     cy.get('#main').should('contain','Congratulation you add Tariff Plan')
+    cy.get('ul.actions').findByText('Home').click()
 
   })
-  
+
+  When("click on add Tariff Plan to customer button",()=>{
+
+    cy.get('.left').findByRole('link', { name: /Add Tariff Plan to Customer/i }).click()
+    
+
+  })
+  And("Provide the Customer ID and submit",()=>{
+
+    cy.findByPlaceholderText('Enter Your Customer ID').type('614453')
+    cy.findByRole('button', { name: /SUBMIT/i }).click()
+
+
+  })
+  And("select the approved Tariff plans",()=>{
+
+    cy.get('#sele').check()
+
+  })
+  Then("click the Add Tariff Plan to the customer",()=>{
+
+    cy.findByRole('button', { name: /Add Tariff Plan to Customer/i }).click()
+  })
+
+
 
 
